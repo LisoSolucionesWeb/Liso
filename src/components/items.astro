@@ -1,0 +1,14 @@
+---
+const {item: {img, tit, desc}} = Astro.props
+---
+
+<div class="grid grid-cols-2">
+    <img class="h-24 text-white" src={img} alt="">
+    <div class="flex flex-col gap-5">
+        <h3 class="font-bold text-xl text-slate-300">{tit}</h3>
+        <p class="text-lg italic text-slate-300">{desc}</p>
+
+    </div>
+
+
+</div>
