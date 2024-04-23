@@ -2,13 +2,11 @@
 const {item: {img, tit, desc}} = Astro.props
 ---
 
-<div class="grid grid-cols-2">
-    <img class="h-24 text-white" src={img} alt="">
-    <div class="flex flex-col gap-5">
-        <h3 class="font-bold text-xl text-slate-300">{tit}</h3>
-        <p class="text-lg italic text-slate-300">{desc}</p>
+<div class="lg:grid flex flex-col grid-cols-3 justify-center items-center">
+    <img class="col-span-1 h-24 text-white lg:ml-auto mx-auto" src={img} alt="">
+    <div class="col-span-2 flex flex-col pr-5 mr-auto ">
+        <h3 class="font-bold text-xl text-slate-300 text-center mb-4">{tit}</h3>
+        <p class="text-lg italic text-slate-300 text-center">{desc}</p>
 
     </div>
-
-
 </div>
