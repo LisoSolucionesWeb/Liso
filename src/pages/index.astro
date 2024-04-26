@@ -1,15 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Header from "../layouts/header.astro";
-import Inicio1 from "../layouts/inicio1.astro"
+import Header from "../components/header/Header.astro";
+
+import Main from "../components/main/Main.astro"
+import Hero from '../components/hero/Hero.astro';
 
 ---
 
 <Layout title="Welcome to Liso Soluciones Web.">
-	<main>
-		<Header/>
-		<Inicio1/>
-
-	</main>
+	<Hero/>
+	<Header/>
+	<Main/>
 </Layout>
 
