@@ -1,54 +1,36 @@
-# Astro Starter Kit: Basics
+# Proyecto de Landing Page para Liso
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Acerca de Liso
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+**Liso** es una empresa emergente que se especializa en la producción de páginas web para comercios barriales. Nuestro objetivo es ayudar a las empresas locales a tener una presencia en línea sólida y efectiva.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Descripción del Proyecto
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+Este proyecto es una landing page diseñada específicamente para **Liso**. La página de inicio servirá como el primer punto de contacto para los clientes potenciales que estén interesados en nuestros servicios de diseño web.
 
-## 🚀 Project Structure
+## Características
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Diseño Responsive**: La página web está diseñada para ser visualizada en cualquier dispositivo, ya sea un ordenador de escritorio, un portátil, una tablet o un teléfono móvil.
+- **Optimizada para SEO**: Hemos optimizado la página de inicio para los motores de búsqueda para ayudar a mejorar la visibilidad de Liso en línea.
+- **Integración con Redes Sociales**: Los visitantes pueden compartir fácilmente nuestro contenido en sus redes sociales favoritas.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Tecnologías Utilizadas
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+- AstroJS
+- Tailwind
+- Vite
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Cómo Iniciar el Proyecto
 
-Any static assets, like images, can be placed in the `public/` directory.
+Para iniciar el proyecto, necesitarás tener instalado Node.js y npm. Luego, sigue estos pasos:
 
-## 🧞 Commands
+1. Clona el repositorio.
+2. Entra en el directorio del proyecto: `cd liso-landing-page`
+3. Instala las dependencias: `npm install`
+4. Inicia el servidor de desarrollo: `npm run dev`
 
-All commands are run from the root of the project, from a terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Cómo Contribuir
 
-## 👀 Want to learn more?
+Nos encantaría recibir tus contribuciones. Por favor, lee nuestras Guías de Contribución para obtener más información.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
