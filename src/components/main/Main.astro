@@ -1,0 +1,74 @@
+---
+import Boton from "./componentes/Boton.astro";
+import Info from "./componentes/Info.astro";
+import Item from "./componentes/Items.astro";
+---
+<main>
+
+      
+    <Info></Info>
+
+    <div class="w-4/5 mx-auto flex flex-col lg:flex-row items-center gap-y-10 justify-center gap-x-32 mt-32">
+      <Boton button = {{name: "Contactenos"}}/>
+      <Boton button = {{name: "¿Quienes somos?"}}/>
+    </div>
+
+
+    <div class="w-11/12 mx-auto lg:grid gap-10 lg:gap-5 grid-cols-3 mt-32 flex flex-col items-center justify-center">
+      
+      <Item item = {{ img: "https://static.wixstatic.com/media/3c6a9e_eee598627b5749bdb93288c67fa49e6d~mv2.png/v1/fill/w_420,h_371,al_c,lg_1,q_85,enc_auto/atencion-personalizada-al-cliente-png-7_.png",
+                      tit: "Asistencia personalizada",
+                      desc:`Cada cliente es distinto, por ende nos adaptamos a cualquier escenario para cumplir con nuestro objetivo`
+    }}/>
+
+      <Item item = {{ img: "https://cdn-icons-png.flaticon.com/512/1019/1019607.png",
+                      tit: "Pagos Flexibles",
+                      desc:"Contamos con flexibilidad, tanto en medios como en formas de pago"
+      }}/>
+
+      <Item item = {{ img: "https://cdn-icons-png.flaticon.com/512/949/949890.png",
+                      tit: "Mantenimiento gratis",
+                      desc:"Ofrecemos un mes de mantenimiento web gratis para garantizar el funcionamiento y optimizacion ideal."
+    }}/>
+    </div>
+
+
+    <div class=" w-4/5 mx-auto lg:grid flex flex-col-reverse lg:gap-0 gap-10 grid-cols-2 justify-center items-center mt-32">
+      <img src="https://img.interempresas.net/fotos/2725446.png" alt="">
+      <div class="flex flex-col gap-8">
+        <h2 class="text-5xl text-slate-300 text-start">La mejor relacion <span class="text-amber-500"> precio / costo </span> </h2>
+        <p class="text-xl font-extralight text-slate-300">¿Desea destacarse en línea? ¡Nosotros lo hacemos posible! <br><br> Con nuestro servicio de diseño web, no solo le ofrecemos una presencia en línea atractiva, sino también un buen posicionamiento web. <br> <br>Además, <span class="font-bold">tenemos los mejores precios del mercado, (¡y en AR$!)</span> Nuestro servicio es completamente accesible a diferencia del resto, contactenos y <span class="font-bold">charlemos de su negocio.</span> ¡Permítanos llevar su negocio al siguiente nivel con una página web que destaque y atraiga a sus clientes potenciales!</p>
+      </div>
+      
+    </div>
+
+
+  </div>
+</main>
+
+
+
+
+<!-- Importa el CSS de Swiper.js -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Importa el JS de Swiper.js y inicializa el slider -->
+<script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script is:inline>
+  new Swiper (".swiper-container", {
+    direction: "horizontal",
+    loop: true,
+
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    autoplay: {
+        delay: 3000,
+    },
+    // Cambia el efecto de transición a "cube" o "coverflow"
+    effect: 'slide',
+    //slidesPerView: 1, // Muestra solo una diapositiva a la vez
+    centeredSlides: true, // Centra el slider activo
+});
+</script>
