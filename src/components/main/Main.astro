@@ -44,10 +44,27 @@ import Slider from "./componentes/Slider.astro";
       
     </div>
 
-    <Slider slider={{tit: "Confianza", desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi officia inventore magnam minus, molestias explicabo.", image:"https://cdn-icons-png.flaticon.com/512/7178/7178931.png"}}/>
 
-
-
+    <div class="swiper-container lg:w-4/5 w-10/12 mx-auto overflow-hidden mb-10 border">
+      <div class="swiper-wrapper flex justify-center">
+        <div class="swiper-slide slide-1 slide-item img-1">
+          <Slider slider={{ tit: "1", 
+                            desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi officia inventore magnam minus, molestias explicabo.", 
+                            image:"https://cdn-icons-png.flaticon.com/512/7178/7178931.png"}}/>
+        </div>
+    
+        <div class="swiper-slide slide-2 slide-item img-2">
+          <Slider slider={{ tit: "2", 
+                            desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi officia inventore magnam minus, molestias explicabo.", 
+                            image:"https://cdn-icons-png.flaticon.com/512/7178/7178931.png"}}/>
+        </div>
+        <div class="swiper-slide slide-3 slide-item img-3">
+          <Slider slider={{ tit: "3", 
+                            desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi officia inventore magnam minus, molestias explicabo.", 
+                            image:"https://cdn-icons-png.flaticon.com/512/7178/7178931.png"}}/>
+        </div>
+      </div>
+    </div>
 
   </div>
 </main>
@@ -61,20 +78,21 @@ import Slider from "./componentes/Slider.astro";
 <!-- Importa el JS de Swiper.js y inicializa el slider -->
 <script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script is:inline>
-  new Swiper (".swiper-container", {
+new Swiper (".swiper-container", {
     direction: "horizontal",
     loop: true,
-
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+    slidesPerView: 4, // Mostrará el número de slides que caben en el contenedor
     autoplay: {
-        delay: 3000,
+        delay: 3000, // Intervalo de tiempo entre cada slide (en milisegundos)
+        disableOnInteraction: false, // Desactiva el autoplay cuando el usuario interactúa con el slider
     },
+    
+    speed: 1000, // Velocidad constante en milisegundos (por ejemplo, 1000ms = 1 segundo)
     // Cambia el efecto de transición a "cube" o "coverflow"
     effect: 'slide',
     //slidesPerView: 1, // Muestra solo una diapositiva a la vez
     centeredSlides: true, // Centra el slider activo
 });
+</script>
+
 </script>
