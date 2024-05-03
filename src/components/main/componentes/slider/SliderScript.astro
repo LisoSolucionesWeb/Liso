@@ -1,0 +1,22 @@
+<!-- Importa el CSS de Swiper.js -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Importa el JS de Swiper.js y inicializa el slider -->
+<script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script is:inline>
+new Swiper (".swiper-container", {
+    direction: "horizontal",
+    loop: true,
+    slidesPerView: 3, // Mostrará el número de slides que caben en el contenedor
+    autoplay: {
+        delay: 5000, // Intervalo de tiempo entre cada slide (en milisegundos)
+        disableOnInteraction: false, // Desactiva el autoplay cuando el usuario interactúa con el slider
+    },
+
+    // centeredSlides: true,
+    
+    speed: 1000, // Velocidad constante en milisegundos (por ejemplo, 1000ms = 1 segundo)
+    // Cambia el efecto de transición a "cube" o "coverflow"
+    
+});
+</script>

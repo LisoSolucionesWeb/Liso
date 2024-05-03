@@ -3,7 +3,6 @@ import Boton from "./componentes/Boton.astro";
 import Info from "./componentes/Info.astro";
 import InfoPrecioCosto from "./componentes/InfoPrecioCosto.astro";
 import Item from "./componentes/Items.astro";
-
 ---
   
 <main>
@@ -39,32 +38,38 @@ import Item from "./componentes/Items.astro";
     <InfoPrecioCosto/>
 
 
+    <div class="swiper-container lg:w-4/5 w-10/12 mx-auto overflow-hidden my-16">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide-1 slide-item img-1">
+          <Slider slider={{ tit: "Confianza", 
+                            desc:"Construyendo confianza con cada paso: su aliado digital de confianza para alcanzar el éxito en su emprendimiento.", 
+                            image:"https://cdn-icons-png.flaticon.com/512/7178/7178931.png"}}/>
+        </div>
+    
+        <div class="swiper-slide slide-2 slide-item img-2">
+          <Slider slider={{ tit: "Calidad", 
+                            desc:"Calidad sin compromisos: nuestra promesa es brindar soluciones digitales confiables que impulsan el éxito de su negocio.", 
+                            image:"https://cdn-icons-png.flaticon.com/512/3937/3937040.png"}}/>
+        </div>
+        <div class="swiper-slide slide-3 slide-item img-3">
+          <Slider slider={{ tit: "Compromiso", 
+                            desc:"Comprometidos con su éxito, ofrecemos soluciones digitales de calidad y una comunicación constante para alcanzar juntos sus objetivos empresariales.", 
+                            image:"https://cdn-icons-png.flaticon.com/512/10162/10162796.png"}}/>
+        </div>
+        <div class="swiper-slide slide-4 slide-item img-4">
+          <Slider slider={{ tit: "Eficiencia", 
+                            desc:"Nuestra eficiencia medible garantiza soluciones digitales precisas y rentables, respaldadas por datos concretos para el éxito empresarial duradero.", 
+                            image:"https://cdn-icons-png.flaticon.com/512/5165/5165949.png"}}/>
+        </div>
+        <div class="swiper-slide slide-5 slide-item img-5">
+          <Slider slider={{ tit: "Flexibilidad", 
+                            desc:"Nuestra flexibilidad se adapta a sus necesidades cambiantes, ofreciendo soluciones digitales versátiles y personalizadas para su empresa.", 
+                            image:"https://cdn-icons-png.flaticon.com/512/2646/2646069.png"}}/>
+        </div>
+      </div>
+    </div>
+
   </div>
 </main>
 
-
-
-
-<!-- Importa el CSS de Swiper.js -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-<!-- Importa el JS de Swiper.js y inicializa el slider -->
-<script is:inline src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script is:inline>
-  new Swiper (".swiper-container", {
-    direction: "horizontal",
-    loop: true,
-
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    autoplay: {
-        delay: 3000,
-    },
-    // Cambia el efecto de transición a "cube" o "coverflow"
-    effect: 'slide',
-    //slidesPerView: 1, // Muestra solo una diapositiva a la vez
-    centeredSlides: true, // Centra el slider activo
-});
-</script>
+<SliderScript/>
