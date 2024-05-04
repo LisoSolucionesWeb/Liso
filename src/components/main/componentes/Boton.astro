@@ -1,7 +1,31 @@
 ---
-const {button: {name}} = Astro.props
+const {
+    button: {name},
+    button: {ref}
+} = Astro.props
+
+console.log(name, ref)
 ---
 
-<button class="bg-custom-yellow hover:bg-yellow-800 hover:text-zinc-200 hover:scale-110 active:scale-105 lg:px-10 lg:py-4 lg:text-3xl px-3 py-2 rounded-2xl text-xl transition w-40 sx:w-1/2 lg:w-auto">
+<a href={ref} id={"smoothScrollButton"+name} class="bg-custom-yellow hover:bg-yellow-800 hover:text-zinc-200 hover:scale-110 active:scale-105 lg:px-10 lg:py-4 lg:text-3xl px-3 py-2 rounded-2xl text-2xl transition w-52 md:w-1/2 lg:w-auto text-center">
     {name}
-</button>
+</a>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const buttons = document.querySelectorAll('[id^="smoothScrollButton"]');
+        buttons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = (e.currentTarget as HTMLElement).getAttribute("href");
+                const targetElement = document.querySelector(targetId);
+                if (targetElement instanceof HTMLElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    });
+</script>

@@ -12,9 +12,9 @@ import SliderScript from "./componentes/slider/SliderScript.astro";
       
     <Info></Info>
 
-    <div class="w-4/5 mx-auto flex flex-col lg:flex-row items-center gap-y-10 justify-center gap-x-32 mt-40 mb-40">
-      <Boton button = {{name: "Contactenos"}}/>
-      <Boton button = {{name: "¿Quienes somos?"}}/>
+    <div class="w-4/5 mx-auto flex flex-col lg:flex-row items-center gap-y-10 justify-center gap-x-32  mt-32 mb-32">
+      <Boton button={{name: "¿Por que elegirnos?", ref: "#info"}}/>
+      <Boton button = {{name: "Contactanos", ref: "#contacto"}}/>
     </div>
 
 
@@ -40,7 +40,7 @@ import SliderScript from "./componentes/slider/SliderScript.astro";
     <InfoPrecioCosto/>
 
 
-    <div class="swiper-container lg:w-4/5 w-10/12 mx-auto overflow-hidden my-16">
+    <div class="swiper-container lg:w-4/5 w-10/12 mx-auto overflow-hidden mt-16">
       <div class="swiper-wrapper">
         <div class="swiper-slide slide-1 slide-item img-1">
           <Slider slider={{ tit: "Confianza", 
