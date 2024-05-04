@@ -7,7 +7,21 @@
 new Swiper (".swiper-container", {
     direction: "horizontal",
     loop: true,
-    slidesPerView: 3, // Mostrará el número de slides que caben en el contenedor
+    breakpoints: {
+        
+        640: {
+            slidesPerView: 1, // Mostrar solo 1 slider
+        },
+        
+        768: {
+       
+        },
+       
+        1024: {
+            slidesPerView: 3,
+        },
+    },
+
     autoplay: {
         delay: 5000, // Intervalo de tiempo entre cada slide (en milisegundos)
         disableOnInteraction: false, // Desactiva el autoplay cuando el usuario interactúa con el slider
