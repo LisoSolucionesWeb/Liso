@@ -34,3 +34,8 @@ Para iniciar el proyecto, necesitarás tener instalado Node.js y npm. Luego, sig
 
 Nos encantaría recibir tus contribuciones. Por favor, lee nuestras Guías de Contribución para obtener más información.
 
+## Contribuidores
+
+<a href="https://github.com/LisoSolucionesWeb/Liso/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=LisoSolucionesWeb/Liso" />
+</a>
